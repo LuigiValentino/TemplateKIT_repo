@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TemplateKit Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #2c2c2c;
+            color: #ece7e1;
+            font-family: "League Spartan", sans-serif;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        hr {
+            border: none;
+            height: 3px;
+            background-color: #ffce54;
+            margin: 40px 0;
+        }
+        pre, code {
+            background-color: #1e1e1e;
+            color: #ece7e1;
+            padding: 15px;
+            display: block;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        ol {
+            padding-left: 40px;
+        }
+        h2 {
+            color: #ffce54;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: #ffce54;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        section {
+            margin-bottom: 60px;
+        }
+        .example-code {
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #ffce54;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #e5b748;
+        }
+        #header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h1>TemplateKit Documentation</h1>
+        <p>Modular framework for creating reusable HTML, CSS, and JavaScript components.</p>
+        <hr>
+    </div>
+
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>TemplateKit is a modular framework that allows you to create reusable components in HTML, CSS, and JavaScript. The goal is to simplify the development of web pages by breaking them into smaller, manageable parts.</p>
+        <a class="button" href="https://github.com/LuigiValentino/TemplateKIT_repo" target="_blank">View on GitHub</a>
+    </section>
+
+    <section id="get-started">
+        <h2>Getting Started</h2>
+        <p>To start using TemplateKit, the first step is to clone the repository from GitHub. Follow these steps:</p>
+        <ol>
+            <li><strong>Step 1:</strong> Open your terminal and run the following command to clone the repository:</li>
+            <pre><code>git clone https://github.com/LuigiValentino/TemplateKIT_repo</code></pre>
+            <li><strong>Step 2:</strong> Navigate into the cloned directory:</li>
+            <pre><code>cd templatekit</code></pre>
+            <li><strong>Step 3:</strong> Start developing your project by using the modular components provided in the <code>components</code> folder.</li>
+        </ol>
+    </section>
+
+    <section id="installation">
+        <h2>Installation</h2>
+        <p>To integrate TemplateKit into your project, follow these steps:</p>
+        <ol>
+            <li><strong>Step 1:</strong> Include the <code>templatekit.js</code> script in your project:</li>
+            <pre><code>&lt;script src="path/to/templatekit.js"&gt;&lt;/script&gt;</code></pre>
+            <li><strong>Step 2:</strong> Create a <code>components</code> directory in your project, where all your components will reside.</li>
+        </ol>
+    </section>
+
+    <section id="usage">
+        <h2>Usage</h2>
+        <p>Once you've installed TemplateKit, you can start creating and using components in your HTML file. Here's an example:</p>
+        <h3>Basic Usage</h3>
+        <p>In your <code>index.html</code> file, use custom tags like <code>&lt;navbar-component&gt;</code> to load a Navbar component.</p>
+        <pre><code>&lt;navbar-component&gt;&lt;/navbar-component&gt;</code></pre>
+        <p>This custom tag will automatically load the <code>navbar.html</code> component into the page.</p>
+    </section>
+
+    <section id="components">
+        <h2>Creating Components</h2>
+        <p>Components are the core of TemplateKit. Each component consists of three parts: <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. Here's how to create a simple component:</p>
+        
+        <h3>1. HTML</h3>
+        <p>Create an HTML file for your component, for example, <code>navbar.html</code>:</p>
+        <pre><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+        <h3>2. CSS</h3>
+        <p>Create a CSS file for styling your component, for example, <code>navbar.css</code>:</p>
+        <pre><code>nav {
+    background-color: #3498db;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}</code></pre>
+
+        <h3>3. JavaScript (Optional)</h3>
+        <p>If your component needs interactivity, you can add JavaScript in a <code>navbar.js</code> file:</p>
+        <pre><code>document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        alert('Navbar link clicked!');
+    });
+});</code></pre>
+    </section>
+
+    <section id="examples">
+        <h2>Examples</h2>
+        <p>Here are some examples of how to use TemplateKit components:</p>
+        
+        <h3>Navbar Example</h3>
+        <pre class="example-code"><code>&lt;navbar-component&gt;&lt;/navbar-component&gt;</code></pre>
+        
+        <h3>Footer Example</h3>
+        <pre class="example-code"><code>&lt;footer-component&gt;&lt;/footer-component&gt;</code></pre>
+        
+        <p>These examples load the components dynamically using the <code>app.js</code></p>
+    </section>
+
+</body>
+</html>
